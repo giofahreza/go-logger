@@ -1,0 +1,80 @@
+basePath: /
+host: localhost:1234
+info:
+  contact: {}
+  description: This is a sample server Petstore server.
+  title: Echo Swagger Example API
+  version: "1.0"
+paths:
+  /:
+    get:
+      description: get string
+      produces:
+      - text/plain
+      responses:
+        "200":
+          description: Hello, World!
+          schema:
+            type: string
+      summary: Hello World
+  /error:
+    get:
+      description: Get error response
+      produces:
+      - application/json
+      responses:
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get error response
+  /login:
+    post:
+      consumes:
+      - application/json
+      description: Login
+      parameters:
+      - description: Username
+        in: formData
+        name: username
+        required: true
+        type: string
+      - description: Password
+        in: formData
+        name: password
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Login
+  /panic:
+    get:
+      description: Get panic response
+      produces:
+      - application/json
+      responses:
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get panic response
+swagger: "2.0"

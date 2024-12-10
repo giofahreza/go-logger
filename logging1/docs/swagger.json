@@ -1,0 +1,52 @@
+{
+    "schemes": [
+        "http"
+    ],
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a sample server Echo server.",
+        "title": "Echo API",
+        "contact": {},
+        "version": "1"
+    },
+    "host": "localhost:1234",
+    "basePath": "/",
+    "paths": {
+        "/": {
+            "get": {
+                "description": "Get hello world",
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Get hello world",
+                "operationId": "get-hello-world",
+                "responses": {
+                    "200": {
+                        "description": "Hello, World!",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/error": {
+            "get": {
+                "description": "Get error response",
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Get error response",
+                "operationId": "get-error-response",
+                "responses": {
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

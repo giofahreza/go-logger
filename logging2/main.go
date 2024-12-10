@@ -9,6 +9,12 @@ import (
 	"github.com/labstack/echo/v4/middleware"
 )
 
+// @title Echo Swagger Example API
+// @version 1.0
+// @description This is a sample server Petstore server.
+// @host localhost:1234
+// @BasePath /
+
 func main() {
 	// Setup Echo
 	e := echo.New()

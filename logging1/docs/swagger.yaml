@@ -1,0 +1,35 @@
+basePath: /
+host: localhost:1234
+info:
+  contact: {}
+  description: This is a sample server Echo server.
+  title: Echo API
+  version: "1"
+paths:
+  /:
+    get:
+      description: Get hello world
+      operationId: get-hello-world
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Hello, World!
+          schema:
+            type: string
+      summary: Get hello world
+  /error:
+    get:
+      description: Get error response
+      operationId: get-error-response
+      produces:
+      - application/json
+      responses:
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get error response
+schemes:
+- http
+swagger: "2.0"
